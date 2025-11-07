@@ -1,0 +1,33 @@
+<div class="container m-auto rounded-md bg-white shadow-md p-4">
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+
+  <p>Meu nome: <b>{{ name }}</b></p>
+
+  <p>contador {{ counter() }}</p>
+  <button (click)="incrementCounter()" class="p-2 rounded-md bg-amber-500 text-white/80">Incrementar contador</button>
+
+  <p>
+    <label for="nameInput">Atualizar nome:</label>
+    <input id="nameInput" type="text" (input)="updateField($event)" placeholder="Digite seu nome"/>
+  </p>
+
+
+    @if(name.length > 5) {
+      <p>Nome longo</p>
+    } @else {
+      <p>Nome curto</p>
+    }
+  <h2 class="text-2xl font-semibold mt-4 mb-2">Items:</h2>
+  <ul>
+    @for (item of items; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+
+  <h1> {{ userName }} </h1>
+  <h1> {{ userAge }} </h1>
+
+  <button (click)="sendMessage()" class="p-2 rounded-md bg-blue-500 text-white/80 mt-4">Enviar Saudação ao pai</button>
+</div>
