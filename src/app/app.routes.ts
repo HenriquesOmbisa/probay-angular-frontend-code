@@ -11,8 +11,6 @@ import { DashboardAddProductComponent } from './pages/private/dashboard/dashboar
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'product/:id', component: ProductComponent },
-  { path: 'checkout', component: CheckoutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
